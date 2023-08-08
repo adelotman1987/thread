@@ -1,0 +1,265 @@
+"use client";
+import React from "react";
+import "./App.css";
+
+import {
+  EmailIcon,
+  FacebookIcon,
+  FacebookMessengerIcon,
+  FacebookMessengerShareButton,
+  HatenaIcon,
+  InstapaperIcon,
+  LineIcon,
+  LinkedinIcon,
+  LivejournalIcon,
+  LivejournalShareButton,
+  MailruIcon,
+  MailruShareButton,
+  PinterestIcon,
+  PinterestShareButton,
+  PocketIcon,
+  PocketShareButton,
+  RedditIcon,
+  RedditShareButton,
+  TelegramIcon,
+  TelegramShareButton,
+  TumblrIcon,
+  TumblrShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+  ViberIcon,
+  ViberShareButton,
+  VKIcon,
+  WeiboIcon,
+  WeiboShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+  WorkplaceIcon,
+  WorkplaceShareButton,
+  GabIcon,
+  EmailShareButton,
+  FacebookShareButton,
+  VKShareButton,
+  GabShareButton,
+  HatenaShareButton,
+  LineShareButton,
+  LinkedinShareButton,
+  InstapaperShareButton,
+} from "next-share";
+
+interface AppIcon {
+  id: number;
+  name: string;
+  iconUrl: string;
+}
+
+interface CommandPalette {
+  id: number;
+  name: string;
+  commands: string[];
+}
+const appIcons: AppIcon[] = [
+  {
+    id: 1,
+    name: "App 1",
+    iconUrl: "url-to-app1-icon",
+  },
+  {
+    id: 2,
+    name: "App 2",
+    iconUrl: "url-to-app2-icon",
+  },
+  // Add more app icons as needed
+];
+
+const commandPalettes: CommandPalette[] = [
+  {
+    id: 1,
+    name: "Palette 1",
+    commands: ["Command 1", "Command 2", "Command 3"],
+  },
+  {
+    id: 2,
+    name: "Palette 2",
+    commands: ["Command A", "Command B", "Command C"],
+  },
+  // Add more command palettes as needed
+];
+const page = () => {
+  return (
+    <div className="mt-4 py-3 text-white">
+      <div className="App">
+        <h1>App Icons</h1>
+        <div className="app-icons">
+          {appIcons.map((app) => (
+            <div key={app.id} className="app-icon">
+              <img src={app.iconUrl} alt={app.name} />
+              <span>{app.name}</span>
+            </div>
+          ))}
+        </div>
+
+        <h1>Command Palettes</h1>
+        <div className="command-palettes">
+          {commandPalettes.map((palette) => (
+            <div key={palette.id} className="command-palette">
+              <h3>{palette.name}</h3>
+              <ul>
+                <RedditShareButton
+                  url={"https://github.com/next-share"}
+                  title={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                >
+                  <RedditIcon size={32} round />
+                </RedditShareButton>
+                <PocketShareButton
+                  url={"https://github.com/next-share"}
+                  title={"Next Share"}
+                >
+                  <PocketIcon size={32} round />
+                </PocketShareButton>
+                <PinterestShareButton
+                  url={"https://github.com/next-share"}
+                  media={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                >
+                  <PinterestIcon size={32} round />
+                </PinterestShareButton>
+                <TelegramShareButton
+                  url={"https://github.com/next-share"}
+                  title={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                >
+                  <TelegramIcon size={32} round />
+                </TelegramShareButton>
+                <TumblrShareButton
+                  url={"https://github.com/next-share"}
+                  title={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                >
+                  <TumblrIcon size={32} round />
+                </TumblrShareButton>
+                <TwitterShareButton
+                  url={"https://github.com/next-share"}
+                  title={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                >
+                  <TwitterIcon size={32} round />
+                </TwitterShareButton>
+                <WeiboShareButton
+                  url={"https://github.com/next-share"}
+                  title={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                >
+                  <WeiboIcon size={32} round />
+                </WeiboShareButton>
+                <ViberShareButton
+                  url={"https://github.com/next-share"}
+                  title={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                >
+                  <ViberIcon size={32} round />
+                </ViberShareButton>
+                <WhatsappShareButton
+                  url={"https://github.com/next-share"}
+                  title={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                  separator=":: "
+                >
+                  <WhatsappIcon size={32} round />
+                </WhatsappShareButton>
+                <WorkplaceShareButton
+                  url={"https://github.com/next-share"}
+                  quote={"Next Share"}
+                >
+                  <WorkplaceIcon size={32} round />
+                </WorkplaceShareButton>
+                <LivejournalShareButton
+                  url={"https://github.com/next-share"}
+                  title={"Next Share"}
+                  description={"https://github.com/next-share"}
+                >
+                  <LivejournalIcon size={32} round />
+                </LivejournalShareButton>
+                <MailruShareButton
+                  url={"https://github.com/next-share"}
+                  title={"Next Share"}
+                >
+                  <MailruIcon size={32} round />
+                </MailruShareButton>
+                <FacebookMessengerShareButton
+                  url={"https://github.com/next-share"}
+                  appId={""}
+                >
+                  <FacebookMessengerIcon size={32} round />
+                </FacebookMessengerShareButton>
+                <LinkedinShareButton url={"https://github.com/next-share"}>
+                  <LinkedinIcon size={32} round />
+                </LinkedinShareButton>
+
+                <LineShareButton
+                  url={"https://github.com/next-share"}
+                  title={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                >
+                  <LineIcon />
+                </LineShareButton>
+                <FacebookShareButton
+                  url={"https://github.com/next-share"}
+                  quote={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                  hashtag={"#nextshare"}
+                >
+                  <FacebookIcon size={32} round />
+                </FacebookShareButton>
+                <VKShareButton
+                  url={"https://github.com/next-share"}
+                  image={"./next-share.png"}
+                >
+                  <VKIcon size={32} round />
+                </VKShareButton>
+
+                <EmailShareButton url="/" subject={"Next Share"}>
+                  <EmailIcon size={32} round />
+                </EmailShareButton>
+                <GabShareButton
+                  url={"https://github.com/next-share"}
+                  title={"Next Share"}
+                >
+                  <GabIcon size={32} round />
+                </GabShareButton>
+                <HatenaShareButton
+                  url={"https://github.com/next-share"}
+                  title={"Next Share"}
+                >
+                  <HatenaIcon size={32} round />
+                </HatenaShareButton>
+                <InstapaperShareButton
+                  url={"https://github.com/next-share"}
+                  title={"Next Share"}
+                >
+                  <InstapaperIcon size={32} round />
+                </InstapaperShareButton>
+                {/* {palette.commands.map((command) => (
+                <li key={command}>{command}</li>
+              ))} */}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default page;
