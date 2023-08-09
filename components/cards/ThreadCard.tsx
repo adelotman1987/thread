@@ -87,7 +87,7 @@ function ThreadCard({
                     className='cursor-pointer object-contain'
                   />
                 </Link>
-                {/* <Link href={`/repost/${id}`}> */}
+               
                 <Image
                   src='/assets/repost.svg'
                   alt='repost'
@@ -95,7 +95,7 @@ function ThreadCard({
                   height={24}
                   className='cursor-pointer object-contain'
                 />
-                {/* </Link> */}
+            
                 <Image
                   src='/assets/share.svg'
                   alt='share'
